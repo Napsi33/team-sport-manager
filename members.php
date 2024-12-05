@@ -1,17 +1,23 @@
 <?php include "header.php"; ?>
-<h1>Users</h1>
+<h1>Members</h1>
 <table>
     <thead>
         <tr>
-            <td>Username</td>
             <td>Name</td>
+            <td>Nationality</td>
+            <td>Date of birth</td>
+            <td>Position</td>
+            <td>Team</td>
             <td>Operations</td>
         </tr>
     </thead>
     <tbody>
         <tr>
-            <td>Napsi</td>
-            <td>Napsugár Csanádi</td>
+            <td>Mario Sostaric</td>
+            <td>Sloven</td>
+            <td>1992.11.25.</td>
+            <td>Right wing</td>
+            <td>OTP Pick Szeged</td>
             <td>
                 <a>Edit</a> | <a>Delete</a>
             </td>
