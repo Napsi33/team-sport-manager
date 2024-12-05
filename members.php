@@ -1,5 +1,5 @@
 <?php include "header.php"; ?>
-<h1>Members</h1>
+<h2>Members</h2>
 <table>
     <thead>
         <tr>

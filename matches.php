@@ -1,5 +1,5 @@
 <?php include "header.php"; ?>
-<h1>Matches</h1>
+<h2>Matches</h2>
 <table>
     <thead>
         <tr>

@@ -1,5 +1,8 @@
 <?php include "header.php"; ?>
-<h1>Teams</h1>
+<h2>Teams</h2>
+<p class="new-item-wrapper">
+    <a href="teams_new.php">New team</a>
+</p>
 <table>
     <thead>
         <tr>

@@ -1,8 +1,8 @@
 <?php include "header.php"; ?>
 
-<h1>
+<h2>
     <?php echo "Hello World"; ?>
-</h1>
+</h2>
 <a href="Users.php">link</a>
 
 <?php include "footer.php"; ?>
