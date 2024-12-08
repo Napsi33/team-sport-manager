@@ -73,3 +73,15 @@ table td {
     padding: 5px;
     border: 1px solid black;
 }
+
+form input, form select, form select option {
+    border: 1px solid black;
+    background: lightgrey;
+    padding: 5px;
+    margin: 5px;
+    border-radius: 3px;
+}
+
+form label {
+    font-weight: bold;
+}

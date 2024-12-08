@@ -1,4 +1,26 @@
-<?php include "header.php"; ?>
+<?php 
+include "database.php";
+
+$conn = connect_db();
+
+$stmt = $conn->prepare("
+    SELECT
+        matches.team_home_goals,
+        matches.team_away_goals,
+        matches.venue,
+        matches.date,
+        home_teams.name AS home_team_name,
+        away_teams.name AS away_team_name
+    FROM matches
+    JOIN teams as home_teams ON home_teams.id = matches.team_home_id
+    JOIN teams as away_teams ON away_teams.id = matches.team_away_id
+    ");
+$stmt->execute();
+$result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
+
+include "header.php"; 
+?>
+
 <h2>Matches</h2>
 <p class="new-item-wrapper">
     <a href="matches_new.php">New match</a>
@@ -15,16 +37,21 @@
         </tr>
     </thead>
     <tbody>
-        <tr>
-            <td>Szeged</td>
-            <td>Aalborg</td>
-            <td>27:28</td>
-            <td>Szeged</td>
-            <td>2024.12.05.</td>
-            <td>
-                <a>Edit</a> | <a>Delete</a>
-            </td>
-        </tr>
+        <?php
+            while($row = $stmt->fetch()) {
+                echo '
+                <tr>
+                    <td>' . $row['home_team_name'] . '</td>
+                    <td>' . $row['away_team_name'] . '</td>
+                    <td>' . $row['team_home_goals'] . ':' . $row['team_away_goals'] . '</td>
+                    <td>' . $row['venue'] . '</td>
+                    <td>' . $row['date'] . '</td>
+                    <td>
+                        <a>Edit</a> | <a>Delete</a>
+                    </td>
+                </tr>';
+            }
+        ?>
     </tbody>
 </table>
 <?php include "footer.php"; ?>

@@ -1,4 +1,15 @@
-<?php include "header.php"; ?>
+<?php
+include "database.php";
+
+$conn = connect_db();
+
+$stmt = $conn->prepare("SELECT * from teams");
+$stmt->execute();
+$result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
+
+include "header.php";
+?>
+
 <h2>Teams</h2>
 <p class="new-item-wrapper">
     <a href="teams_new.php">New team</a>
@@ -13,14 +24,19 @@
         </tr>
     </thead>
     <tbody>
-        <tr>
-            <td>OTP Pick Szeged</td>
-            <td>Szeged</td>
-            <td>1961</td>
-            <td>
-                <a>Edit</a> | <a>Delete</a>
-            </td>
-        </tr>
+        <?php
+            while($row = $stmt->fetch()) {
+                echo '
+                <tr>
+                    <td>' . $row['name'] . '</td>
+                    <td>' . $row['city'] . '</td>
+                    <td>' . $row['year_of_foundation'] . '</td>
+                    <td>
+                        <a>Edit</a> | <a>Delete</a>
+                    </td>
+                </tr>';
+            }
+        ?>
     </tbody>
 </table>
 <?php include "footer.php"; ?>
