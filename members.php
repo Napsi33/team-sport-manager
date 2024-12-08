@@ -1,5 +1,8 @@
 <?php include "header.php"; ?>
 <h2>Members</h2>
+<p class="new-item-wrapper">
+    <a href="members_new.php">New member</a>
+</p>
 <table>
     <thead>
         <tr>

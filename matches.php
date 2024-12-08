@@ -1,10 +1,13 @@
 <?php include "header.php"; ?>
 <h2>Matches</h2>
+<p class="new-item-wrapper">
+    <a href="matches_new.php">New match</a>
+</p>
 <table>
     <thead>
         <tr>
-            <td>Team home</td>
-            <td>Team away</td>
+            <td>Home team</td>
+            <td>Away team</td>
             <td>Result</td>
             <td>Venue</td>
             <td>Date</td>
