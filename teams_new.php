@@ -1,6 +1,6 @@
 <?php include "header.php"; ?>
 <h2>New team</h2>
-<form>
+<form method="POST" action="teams_create.php">
    <label for="name">Name</label><br />
    <input type="text" id="name" name="name" /><br />
 

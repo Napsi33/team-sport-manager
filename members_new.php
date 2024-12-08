@@ -1,6 +1,6 @@
 <?php include "header.php"; ?>
 <h2>New member</h2>
-<form>
+<form method="POST" action="members_create.php">
    <label for="name">Name</label><br />
    <input type="text" id="name" name="name" /><br />
 
@@ -14,7 +14,7 @@
    <input type="text" id="position" name="position" /><br />
 
    <label for="team">Team</label><br />
-   <input type="text" id="team" name="team" /><br />
+   <input type="text" id="team" name="team_id" /><br />
 
    <input type="submit" value="save" />
 </form>
