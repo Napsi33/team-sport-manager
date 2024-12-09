@@ -11,8 +11,8 @@ include "header.php";
    <label for="city">City</label><br />
    <input type="text" id="city" name="city" /><br />
 
-   <label for="year">Year of foundation</label><br />
-   <input type="text" id="year" name="year" /><br />
+   <label for="year_of_foundation">Year of foundation</label><br />
+   <input type="text" id="year_of_foundation" name="year_of_foundation" /><br />
    
    <input type="submit" value="save" />
 </form>

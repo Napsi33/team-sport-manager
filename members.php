@@ -7,6 +7,7 @@ $conn = connect_db();
 
 $stmt = $conn->prepare("
     SELECT
+        members.id,
         members.name,
         members.nationality,
         members.date_of_birth,
@@ -47,7 +48,7 @@ include "header.php";
                     <td>' . $row['position'] . '</td>
                     <td>' . $row['team_name'] . '</td>
                     <td>
-                        <a>Edit</a> | <a>Delete</a>
+                        <a href="members_edit.php?member_id='. $row['id'] .'">Edit</a> | <a>Delete</a>
                     </td>
                 </tr>';
             }

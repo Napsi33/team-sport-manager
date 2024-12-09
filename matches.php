@@ -7,6 +7,7 @@ $conn = connect_db();
 
 $stmt = $conn->prepare("
     SELECT
+        matches.id,
         matches.team_home_goals,
         matches.team_away_goals,
         matches.venue,
@@ -49,7 +50,7 @@ include "header.php";
                     <td>' . $row['venue'] . '</td>
                     <td>' . $row['date'] . '</td>
                     <td>
-                        <a>Edit</a> | <a>Delete</a>
+                        <a href="matches_edit.php?match_id='. $row['id'] .'">Edit</a> | <a>Delete</a>
                     </td>
                 </tr>';
             }

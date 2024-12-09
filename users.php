@@ -32,7 +32,7 @@ include "header.php";
                     <td>' . $row['username'] . '</td>
                     <td>' . $row['name'] . '</td>
                     <td>
-                        <a>Edit</a> | <a>Delete</a>
+                        <a href="users_edit.php?user_id='. $row['id'] .'">Edit</a> | <a>Delete</a>
                     </td>
                 </tr>';
             }

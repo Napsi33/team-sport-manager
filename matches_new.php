@@ -1,39 +1,39 @@
 <?php
 session_start();
-include "database.php";
 include "auth.php";
+include "database.php";
 
 $conn = connect_db();
 $stmt = $conn->prepare("SELECT * from teams");
 $stmt->execute();
-$result = $stmt->fetchAll();
+$teams = $stmt->fetchAll();
 
 include "header.php"; ?>
 <h2>New match</h2>
 <form method="POST" action="matches_create.php">
-   <label for="home_team">Home team</label><br />
-   <select id="home_team" name="home_team" >
+   <label for="team_home_id">Home team</label><br />
+   <select id="team_home_id" name="team_home_id" >
      <?php
-     foreach($result as $row) {
-          echo '<option value="'. $row['id'].'">' . $row['name'] . '</option>';
+     foreach($teams as $team) {
+          echo '<option value="'. $team['id'].'">' . $team['name'] . '</option>';
      }
      ?>
    </select><br />
 
-   <label for="away_team">Away team</label><br />
-   <select id="away_team" name="away_team" >
+   <label for="team_away_id">Away team</label><br />
+   <select id="team_away_id" name="team_away_id" >
      <?php
-          foreach($result as $row) {
-               echo '<option value="'. $row['id'].'">' . $row['name'] . '</option>';
+          foreach($teams as $team) {
+               echo '<option value="'. $team['id'].'">' . $team['name'] . '</option>';
           }
      ?>
    </select><br />
 
-   <label for="home_goals">Home team goals</label><br />
-   <input type="number" id="home_goals" name="home_goals" /><br />
+   <label for="team_home_goals">Home team goals</label><br />
+   <input type="number" id="team_home_goals" name="team_home_goals" /><br />
 
-   <label for="away_goals">Away team goals</label><br />
-   <input type="number" id="away_goals" name="away_goals" /><br />
+   <label for="team_away_goals">Away team goals</label><br />
+   <input type="number" id="team_away_goals" name="team_away_goals" /><br />
 
    <label for="venue">Venue</label><br />
    <input type="text" id="venue" name="venue" /><br />
