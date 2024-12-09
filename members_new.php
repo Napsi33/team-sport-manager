@@ -1,4 +1,8 @@
-<?php include "header.php"; ?>
+<?php
+session_start();
+include "auth.php";
+include "header.php";
+?>
 <h2>New member</h2>
 <form method="POST" action="members_create.php">
    <label for="name">Name</label><br />

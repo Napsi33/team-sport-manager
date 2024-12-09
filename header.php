@@ -6,13 +6,14 @@
     <body>
         <div class="header-wrapper"> 
             <h1>TeamSportManager</h1>
+            <?php if ($_SESSION['loggedin']) echo "<p>Hello " . $_SESSION['username'] . "!</p>" ?>
         </div>
         <div class="menu-wrapper">
             <ul>
-                <li>
-                    <a href="login.php">Login</a>
-                </li>
-                <li>
+                <?php
+
+                if($_SESSION['loggedin']) {
+                echo '<li>
                     <a href="index.php">Welcome</a>
                 </li>
                 <li>
@@ -41,8 +42,18 @@
                 </li>
                 <li>
                     <a href="logout.php">Logout</a>
+                </li>';
+                }
+                else
+                {
+                echo '<li>
+                    <a href="registration.php">Registration</a>
                 </li>
-                
+                <li>
+                    <a href="login.php">Login</a>
+                </li>';
+                }
+                ?>
             </ul>
         </div>
         <div class="main-wrepper">

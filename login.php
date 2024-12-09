@@ -1,6 +1,9 @@
-<?php include "header.php"; ?>
+<?php
+session_start();
+include "header.php";
+?>
 <h2>Login</h2>
-<form>
+<form method="POST" action="login_create.php">
    <label for="username">Username</label><br />
    <input type="text" id="username" name="username" /><br />
 

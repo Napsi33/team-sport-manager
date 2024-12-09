@@ -1,4 +1,8 @@
-<?php include "header.php"; ?>
+<?php
+session_start(); 
+include "auth.php";
+include "header.php";
+?>
 <h2>Edit user</h2>
 <form>
    <label for="username">Username</label><br />

@@ -1,4 +1,6 @@
-<?php 
+<?php
+session_start();
+include "auth.php";
 include "database.php";
 
 $conn = connect_db();

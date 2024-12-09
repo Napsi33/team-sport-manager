@@ -1,6 +1,9 @@
-<?php include "header.php"; ?>
+<?php
+session_start();
+include "header.php";
+?>
 <h2>Registration</h2>
-<form>
+<form method="POST" action="registration_create.php">
    <label for="name">Name</label><br />
    <input type="text" id="name" name="name" /><br />
 

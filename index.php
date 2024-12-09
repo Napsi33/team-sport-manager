@@ -1,3 +1,8 @@
+<?php
+session_start();
+include 'auth.php';
+?>
+
 <?php include "header.php"; ?>
 
 <h2>
