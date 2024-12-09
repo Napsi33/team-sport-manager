@@ -48,7 +48,7 @@ include "header.php";
                     <td>' . $row['position'] . '</td>
                     <td>' . $row['team_name'] . '</td>
                     <td>
-                        <a href="members_edit.php?member_id='. $row['id'] .'">Edit</a> | <a>Delete</a>
+                        <a href="members_edit.php?member_id='. $row['id'] .'">Edit</a> | <a href="members_delete.php?member_id='. $row['id'] .'">Delete</a>
                     </td>
                 </tr>';
             }

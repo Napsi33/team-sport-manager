@@ -13,9 +13,6 @@ include "header.php";
 ?>
 
 <h2>Users</h2>
-<p class="new-item-wrapper">
-    <a href="users_new.php">New user</a>
-</p>
 <table>
     <thead>
         <tr>
@@ -32,7 +29,7 @@ include "header.php";
                     <td>' . $row['username'] . '</td>
                     <td>' . $row['name'] . '</td>
                     <td>
-                        <a href="users_edit.php?user_id='. $row['id'] .'">Edit</a> | <a>Delete</a>
+                        <a href="users_edit.php?user_id='. $row['id'] .'">Edit</a> | <a href="users_delete.php?user_id='. $row['id'] .'">Delete</a>
                     </td>
                 </tr>';
             }

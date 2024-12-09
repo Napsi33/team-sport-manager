@@ -34,7 +34,7 @@ include "header.php";
                     <td>' . $row['city'] . '</td>
                     <td>' . $row['year_of_foundation'] . '</td>
                     <td>
-                        <a href="teams_edit.php?team_id='. $row['id'] .'">Edit</a> | <a>Delete</a>
+                        <a href="teams_edit.php?team_id='. $row['id'] .'">Edit</a> | <a href="teams_delete.php?team_id='. $row['id'] .'">Delete</a>
                     </td>
                 </tr>';
             }

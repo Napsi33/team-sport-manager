@@ -50,7 +50,7 @@ include "header.php";
                     <td>' . $row['venue'] . '</td>
                     <td>' . $row['date'] . '</td>
                     <td>
-                        <a href="matches_edit.php?match_id='. $row['id'] .'">Edit</a> | <a>Delete</a>
+                        <a href="matches_edit.php?match_id='. $row['id'] .'">Edit</a> | <a href="matches_delete.php?match_id='. $row['id'] .'">Delete</a>
                     </td>
                 </tr>';
             }
