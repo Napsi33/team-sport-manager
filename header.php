@@ -38,7 +38,7 @@
                     <a href="wins_losses.php">Wins / losses</a>
                 </li>
                 <li>
-                    <a href="oldest_team.php">Oldest teams</a>
+                    <a href="teams_oldest.php">Oldest team</a>
                 </li>
                 <li>
                     <a href="team_member_nationality.php">Team member nationality</a>
