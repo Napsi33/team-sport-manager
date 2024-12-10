@@ -6,8 +6,7 @@ include 'auth.php';
 <?php include "header.php"; ?>
 
 <h2>
-    <?php echo "Hello World"; ?>
+    Welcome
 </h2>
-<a href="Users.php">link</a>
-
+<p>This is a sport team manager webpage, where you can freely keep track of the results of all the sports you follow and love!</p>
 <?php include "footer.php"; ?>

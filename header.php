@@ -35,13 +35,7 @@
                     <a href="members_youngest.php">Youngest members</a>
                 </li>
                 <li>
-                    <a href="wins_losses.php">Wins / losses</a>
-                </li>
-                <li>
                     <a href="teams_oldest.php">Oldest team</a>
-                </li>
-                <li>
-                    <a href="team_member_nationality.php">Team member nationality</a>
                 </li>
                 <li>
                     <a href="logout.php">Logout</a>
