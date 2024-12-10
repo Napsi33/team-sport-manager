@@ -11,13 +11,15 @@ a {
     width: 100%;
     border-bottom: 2px solid black;
     padding: 20px;
-    background: lightgrey;
     text-align: center;
+    background: url(header_bg.jpg);
+    color: white;
+    text-shadow: 2px 2px #ff0000;
 }
 
 .menu-wrapper {
     border-bottom: 2px solid black;
-    background: grey;
+    background: rgb(21, 194, 93);
     text-align: center;
     width: 100%;
     margin-bottom: 40px;
@@ -52,7 +54,9 @@ a {
 }
 
 .footer-wrapper {
-    background: grey;
+    background: url(header_bg.jpg);
+    color: white;
+    text-shadow: 2px 2px #ff0000;
     text-align: center;
     width: 100%;
     padding: 20px;
