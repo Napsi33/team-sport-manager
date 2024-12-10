@@ -6,13 +6,13 @@
     <body>
         <div class="header-wrapper"> 
             <h1>TeamSportManager</h1>
-            <?php if ($_SESSION['loggedin']) echo "<p>Hello " . $_SESSION['username'] . "!</p>" ?>
+            <?php if (isset($_SESSION['loggedin']) && $_SESSION['loggedin']) echo "<p>Hello " . $_SESSION['username'] . "!</p>" ?>
         </div>
         <div class="menu-wrapper">
             <ul>
                 <?php
 
-                if($_SESSION['loggedin']) {
+                if(isset($_SESSION['loggedin']) && $_SESSION['loggedin']) {
                 echo '<li>
                     <a href="index.php">Welcome</a>
                 </li>
@@ -29,7 +29,7 @@
                     <a href="matches.php">Matches</a>
                 </li>
                 <li>
-                    <a href="next_matches.php">Next matches</a>
+                    <a href="matches_next.php">Next matches</a>
                 </li>
                 <li>
                     <a href="wins_losses.php">Wins / losses</a>
